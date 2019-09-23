@@ -1,5 +1,7 @@
 import React from 'react';
 import CharacterCard from '../CharacterCard';
+import PropTypes from 'prop-types';
+
 const CharacterList = props => {
   const {data} = props;
   return(
@@ -15,5 +17,7 @@ const CharacterList = props => {
     );
   }
 
-
+  CharacterList.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }
 export default CharacterList;
