@@ -20,10 +20,15 @@ class App extends React.Component {
       .then(data =>{
         console.log(data.results
           )
-      this.setState({api:data.results})    
+        this.setState({api:data.results})    
       } 
       )
   }
+  /*{const houses = data.map(item =>item.house);
+    let setHouses = [...new Set(houses)]
+    const newData = data.map((item, index) => {return{...item, newId: index}});
+    this.setState({api:newData, houses:setHouses})
+  });*/
   componentDidMount(){
     this.fetchCharacters()
   }

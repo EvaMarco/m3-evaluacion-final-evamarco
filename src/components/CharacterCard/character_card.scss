@@ -12,11 +12,14 @@
 .char__image{
   @include center; 
 }
-
+.char__species{
+  margin-top: 5px; 
+  font-size: 22px; 
+}
 .char__info{
+  background-color: $semi-blue; 
   width: 300px; 
   height: 110px; 
-  background-color: $semi-blue; 
   padding: 10px; 
   @include char_text; 
 } 

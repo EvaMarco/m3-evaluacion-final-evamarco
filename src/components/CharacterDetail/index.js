@@ -11,18 +11,18 @@ const Character = props => {
   if(selectedChar[0]){   
     return (
       <Fragment>
-        <Link to = '/'><p className="link__anchor">Volver</p></Link>
+        <Link to = '/'><p className="link__anchor"></p></Link>
         <div className="detail__wrapper">       
           <div className="detail__img">
             <img className ="img" src={selectedChar[0].image} alt={selectedChar[0].name}/>
           </div>
           <div className="detail__info">
             <h2 className="char__name-detail">{selectedChar[0].name}</h2>
-            <h3 className="char__year-title">Status</h3>
-            <p className="char__house">{selectedChar[0].status}</p>
-            <h3 className="char__house-title">Origen</h3>
-            <p className="char__house">{selectedChar[0].origin.name}</p>
-            <h3 className="char__state-title">Episodios</h3>
+            <h3 className="char__status__title">Status</h3>
+            <p className="char__status">{selectedChar[0].status}</p>
+            <h3 className="char__origin-title">Origen</h3>
+            <p className="char__origin">{selectedChar[0].origin.name}</p>
+            <h3 className="char__episodes-title">Episodios</h3>
             <p className="char__episodes">{selectedChar[0].episode.length}</p>
           </div>
         </div>

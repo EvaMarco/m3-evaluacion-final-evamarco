@@ -9,6 +9,6 @@
   border: none; 
   @include input-tipo; 
   &::placeholder{
-    color: $white; 
+    color: $semi-white; 
   }
 }
