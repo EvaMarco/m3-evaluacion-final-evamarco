@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './character_card.scss';
 
 const CharacterCard = props => {
   const {item} = props;
   return(
-    <div className="Card">
-      <div className="card__image">
+    <div className="card">
+      <div className="char__image">
         <img src={item.image} alt={item.name}/>
       </div>
-      <div className="card__info">
+      <div className="char__info">
         <h2 className="char__name">{item.name}</h2>
         <p className="char__species">{item.species}</p>
       </div>

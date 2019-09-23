@@ -1,0 +1,19 @@
+@mixin center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@mixin bg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@mixin hiddenTitle{
+  padding-top: 100px;
+  height: 1px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain; 
+}

@@ -2,12 +2,12 @@ import React from 'react';
 import CharacterCard from '../CharacterCard';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import './character_list.scss';
 
 const CharacterList = props => {
   const {api, query} = props;
   return(
-      <ul className="list">
-        {api
+        api
           .filter(item => {return item.name.toUpperCase().includes(query.toUpperCase())})
           .map((item)=>{
             return(
@@ -18,8 +18,7 @@ const CharacterList = props => {
               </li>
             )
           })
-        }
-      </ul>
+        
     );
   }
 

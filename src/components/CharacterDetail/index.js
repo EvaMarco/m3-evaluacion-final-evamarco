@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-// import './character.scss';
+import './character_detail.scss';
 
 const Character = props => {
   const {routerProps, api} = props;
@@ -24,7 +24,6 @@ const Character = props => {
             <p className="char__house">{selectedChar[0].origin.name}</p>
             <h3 className="char__state-title">Episodios</h3>
             <p className="char__episodes">{selectedChar[0].episode.length}</p>
-
           </div>
         </div>
       </Fragment>

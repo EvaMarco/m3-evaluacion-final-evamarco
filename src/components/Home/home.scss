@@ -1,0 +1,23 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+@import '../../scss/tipography';
+
+.filters__container{
+  padding: 10px; 
+  display: flex;
+  justify-content: flex-end; 
+}
+.char__list{
+  display: grid;
+  grid-template-columns: auto;
+}
+@media (min-width: 768px) {
+  .char__list{
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width: 1024px) {
+  .char__list{
+    grid-template-columns: auto auto auto;
+  }
+}

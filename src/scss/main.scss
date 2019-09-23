@@ -1,0 +1,12 @@
+@import './variables';
+@import './mixins';
+@import './tipography';
+
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+  list-style: none;
+  text-decoration: none; 
+}

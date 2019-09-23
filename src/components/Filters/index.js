@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './filters.scss';
+import './filters.scss';
 
 const Filters = props => {
   const {getUserInput, query} = props;
@@ -13,7 +13,7 @@ const Filters = props => {
         id = "name" 
         placeholder ="Busca por nombre" 
         onChange = {getUserInput}
-        // value = {query}
+        value = {query}
       />
     </div>
   )

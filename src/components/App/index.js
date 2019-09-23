@@ -3,6 +3,7 @@ import {getCharacters} from '../../services/getcharacters';
 import Home from '../Home';
 import CharacterDetail from '../CharacterDetail';
 import {Route, Switch} from 'react-router-dom';
+import './app.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -33,8 +34,10 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
-        <h1 className="page__title">Rick And Morty Characters</h1>
+      <div className="app">
+        <header className="app__header">
+          <h1 className="page__title">Rick And Morty Characters</h1>
+        </header>
         <Switch>
             <Route 
               exact path = '/' 

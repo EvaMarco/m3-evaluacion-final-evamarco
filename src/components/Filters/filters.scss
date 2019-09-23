@@ -1,0 +1,14 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+@import '../../scss/tipography';
+
+.text__input{
+  background-color: $semi-blue; 
+  margin-bottom: 5px;
+  padding: 5px; 
+  border: none; 
+  @include input-tipo; 
+  &::placeholder{
+    color: $white; 
+  }
+}

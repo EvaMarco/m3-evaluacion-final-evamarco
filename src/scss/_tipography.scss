@@ -1,0 +1,27 @@
+@mixin header-tipo{
+  color: $header-title-color;
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: 30px; 
+  @media (min-width: 768px) {
+    font-size: 40px; 
+  }
+  @media (min-width: 1024px) {
+    font-size: 45px; 
+  }
+}
+@mixin char_text{
+  font-size: 16px; 
+  color: $header-title-color;
+  a:visited{
+    color: $header-title-color;
+  }
+  a:link{
+    color: $header-title-color;
+  }
+}
+@mixin input-tipo{
+  color: $bright-green; 
+  font-size: 16px;
+  text-transform: uppercase;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Filters from '../Filters';
 import CharacterList from '../CharacterList';
+import './home.scss';
 
 const Home = props => {
   const {api, query, getUserInput} = props;

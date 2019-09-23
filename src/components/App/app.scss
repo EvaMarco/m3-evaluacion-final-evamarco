@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+@import '../../scss/tipography';
+
+.app{
+  background-color: $black; 
+  min-height: 100vh; 
+}
+.app__header{
+  @include center;
+  padding: 10px; 
+}
+.page__title{
+  background-image: url(../../images/Rick_and_Morty-logo.png);
+  @include hiddenTitle; 
+}
