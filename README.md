@@ -13,3 +13,6 @@ Debemos realizar este proyecto usando el framework de React.
 - Instalar dependencias para poder usar sass, prop types y el router
 - Limpiar los archivos. 
 
+## Api
+
+Buscamos la Api que nos han dado y miramos como está estructurada. 
