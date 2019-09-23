@@ -1,17 +1,19 @@
 import React from 'react';
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className="App">
-
-      </div>
+import CharacterCard from '../CharacterCard';
+const CharacterList = props => {
+  const {data} = props;
+  return(
+      <ul className="list">
+        {data.map((item)=>{
+          return(
+            <li key={item.id}>
+              <CharacterCard item = {item}/>
+            </li>
+          )
+        })}
+      </ul>
     );
   }
-}
 
-export default App;
+
+export default CharacterList;
