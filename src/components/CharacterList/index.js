@@ -3,21 +3,25 @@ import CharacterCard from '../CharacterCard';
 import PropTypes from 'prop-types';
 
 const CharacterList = props => {
-  const {data} = props;
+  const {data, query} = props;
   return(
       <ul className="list">
-        {data.map((item)=>{
-          return(
-            <li key={item.id}>
-              <CharacterCard item = {item}/>
-            </li>
-          )
-        })}
+        {data
+          .filter(item => {return item.name.toUpperCase().includes(query.toUpperCase())})
+          .map((item)=>{
+            return(
+              <li key={item.id}>
+                <CharacterCard item = {item}/>
+              </li>
+            )
+          })
+        }
       </ul>
     );
   }
 
   CharacterList.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    query: PropTypes.string
   }
 export default CharacterList;

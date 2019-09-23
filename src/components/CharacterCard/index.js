@@ -10,7 +10,7 @@ const CharacterCard = props => {
       </div>
       <div className="card__info">
         <h2 className="char__name">{item.name}</h2>
-        <p className="char__spicies">{item.spicies}</p>
+        <p className="char__species">{item.species}</p>
       </div>
     </div>
   );
