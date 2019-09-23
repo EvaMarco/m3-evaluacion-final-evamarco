@@ -1,5 +1,7 @@
 # Evaluación Final Módulo 3 Eva Marco Domínguez.
 
+![Eva logo](/public/favicon.png "Logo Eva")
+
 ## ¿En qué consiste?
 
 En este ejercicio se nos pide hacer una llamada a una API de una serie y obtener una lista de personajes de la misma. Y plasmar esta información en la pantalla. 
@@ -14,7 +16,8 @@ Debemos realizar este proyecto usando el framework de React.
 - Limpiar los archivos. 
 
 ## Siguientes Fases
-### Fase 1 Pintar la lista
+
+### Fase 1 Pintar la lista 🖌️
 
 1. Crear un estado con la lista vacia.
 2. Hacer la función fetch y el componenDidMount para llamarla.
@@ -25,7 +28,7 @@ Debemos realizar este proyecto usando el framework de React.
 8. Le pasamos los props con destructuring a cada uno de los componentes.
 9. Activamos las prop-types.
 
-### Fase 2 Filter
+### Fase 2 Filter 👍️ 👎️
 
 1. Creamos un input en App.
 2. Creamos una función para conseguir el valor del input.
@@ -38,7 +41,7 @@ Debemos realizar este proyecto usando el framework de React.
 9. El evento se debe bindear porque lo ejecuta el navegador.
 10. Este input puede sacar a un componente y lo podemos llamar filters. A este componente le pasamos la función y podemos al input ponerle el value si queremos que este controlado.  
 
-### Fase 3 Router
+### Fase 3 Router 📤️
 
 Vamos a crear dos páginas: 
 - La principal para la búsqueda.
@@ -61,7 +64,7 @@ import {HashRouter} from 'react-router-dom';
 6. Como tienen props tendremos que usar el render.
 8. Luego creamos los links en cada parte. 
 
-### Fase 4 Detalles
+### Fase 4 Detalles 🔎️
 
 Queremos que ahora cada vez q clickamos en un personaje nos lleve al detalle de ESE personaje. 
 Para identificarlo necesitamos la lista de todos los resultados y algo para identificarlo.
