@@ -1,17 +1,20 @@
 import React from 'react';
 import CharacterCard from '../CharacterCard';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 const CharacterList = props => {
-  const {data, query} = props;
+  const {api, query} = props;
   return(
       <ul className="list">
-        {data
+        {api
           .filter(item => {return item.name.toUpperCase().includes(query.toUpperCase())})
           .map((item)=>{
             return(
               <li key={item.id}>
-                <CharacterCard item = {item}/>
+                <Link to = {`/character/${item.id}`}>
+                  <CharacterCard item = {item}/>  
+                </Link>
               </li>
             )
           })
@@ -21,7 +24,7 @@ const CharacterList = props => {
   }
 
   CharacterList.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    api: PropTypes.arrayOf(PropTypes.object).isRequired,
     query: PropTypes.string
   }
 export default CharacterList;

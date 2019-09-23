@@ -1,7 +1,8 @@
 import React from 'react';
 import {getCharacters} from '../../services/getcharacters';
-import CharacterList from '../CharacterList';
-import Filters from '../Filters';
+import Home from '../Home';
+import CharacterDetail from '../CharacterDetail';
+import {Route, Switch} from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,8 +35,35 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1 className="page__title">Rick And Morty Characters</h1>
-        <Filters getUserInput={this.getUserInput} query={this.state.query}/>
-        <CharacterList data = {this.state.api} query={this.state.query}/>
+        <Switch>
+            <Route 
+              exact path = '/' 
+              render = {
+                () => {
+                  return (
+                    <Home 
+                      api = {this.state.api} 
+                      query = {this.state.query}
+                      getUserInput = {this.getUserInput} 
+                    />
+                  )
+                }
+              }
+            />
+            <Route 
+              path = '/character/:charId'
+              render = {
+                (routerProps) => {
+                  return (
+                    <CharacterDetail 
+                      api = {this.state.api} 
+                      routerProps = {routerProps}
+                    />
+                  )
+                }
+              }
+            />
+          </Switch>
       </div>
     );
   }
