@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.07551900.chunk.css",
+    "main.js": "./static/js/main.ffcaedbe.chunk.js",
+    "main.js.map": "./static/js/main.ffcaedbe.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.dd4089de.js",
+    "runtime-main.js.map": "./static/js/runtime-main.dd4089de.js.map",
+    "static/js/2.5f505ef4.chunk.js": "./static/js/2.5f505ef4.chunk.js",
+    "static/js/2.5f505ef4.chunk.js.map": "./static/js/2.5f505ef4.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.a41284e3f064041a6889b75692aaa7b8.js": "./precache-manifest.a41284e3f064041a6889b75692aaa7b8.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.07551900.chunk.css.map": "./static/css/main.07551900.chunk.css.map",
+    "static/media/app.scss": "./static/media/Rick_and_Morty-logo.75509f2e.png"
+  }
+}

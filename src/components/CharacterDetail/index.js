@@ -20,7 +20,9 @@ const Character = props => {
           <div className="detail__info">
             <h2 className="char__name-detail">{selectedChar[0].name}</h2>
             <h3 className="char__status__title">Status</h3>
-            <p className="char__status"><i className="fas fa-heartbeat"></i></p>
+            <p className="char__status">
+              <i className="fas fa-heartbeat"></i>
+            </p>
             <h3 className="char__origin-title">Origen</h3>
             <p className="char__origin">{selectedChar[0].origin.name}</p>
             <h3 className="char__episodes-title">Episodios</h3>
@@ -29,7 +31,6 @@ const Character = props => {
         </div>
       </Fragment>
       )
-
     }
     else if(selectedChar[0].status === 'unknown'){
       return(
@@ -42,7 +43,9 @@ const Character = props => {
           <div className="detail__info">
             <h2 className="char__name-detail">{selectedChar[0].name}</h2>
             <h3 className="char__status__title">Status</h3>
-            <p className="char__status"><i className="fas fa-question-circle"></i></p>
+            <p className="char__status">
+              <i className="fas fa-question-circle"></i>
+            </p>
             <h3 className="char__origin-title">Origen</h3>
             <p className="char__origin">{selectedChar[0].origin.name}</p>
             <h3 className="char__episodes-title">Episodios</h3>
@@ -64,7 +67,9 @@ const Character = props => {
           <div className="detail__info">
             <h2 className="char__name-detail">{selectedChar[0].name}</h2>
             <h3 className="char__status__title">Status</h3>
-            <p className="char__status"><i className="fas fa-skull-crossbones"></i></p>
+            <p className="char__status">
+              <i className="fas fa-skull-crossbones"></i>
+            </p>
             <h3 className="char__origin-title">Origen</h3>
             <p className="char__origin">{selectedChar[0].origin.name}</p>
             <h3 className="char__episodes-title">Episodios</h3>
@@ -83,7 +88,7 @@ const Character = props => {
         <Link to="/" className="app__back">
           Volver al listado
         </Link>
-        <p>No tenemos datos de ese personaje.</p>
+        <p className = "noData">No tenemos datos de ese personaje.</p>
       </Fragment>
     )
   }
