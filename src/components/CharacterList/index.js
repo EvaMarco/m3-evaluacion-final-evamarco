@@ -5,10 +5,11 @@ import {Link} from 'react-router-dom';
 import './character_list.scss';
 
 const CharacterList = props => {
-  const {api, query} = props;
+  const {api, query, planet} = props;
   return(
         api
           .filter(item => {return item.name.toUpperCase().includes(query.toUpperCase())})
+          .filter(item => {if(planet=== 'null'){return(item)}else{return item.origin.name.toUpperCase().includes(planet.toUpperCase())}})
           .map((item)=>{
             return(
               <li key={item.id}>
@@ -24,6 +25,7 @@ const CharacterList = props => {
 
   CharacterList.propTypes = {
     api: PropTypes.arrayOf(PropTypes.object).isRequired,
-    query: PropTypes.string
+    query: PropTypes.string,
+    planet: PropTypes.string.isRequired
   }
 export default CharacterList;

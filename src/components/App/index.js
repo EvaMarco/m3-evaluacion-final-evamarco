@@ -10,32 +10,34 @@ class App extends React.Component {
     super(props);
     this.state = {
       api:[],
-      query: ''
+      query: '',
+      planets:[],
+      planet: 'null'
     }
     this.getUserInput= this.getUserInput.bind(this); 
+    this.getSelectValue= this.getSelectValue.bind(this); 
   }
 
   fetchCharacters(){
     getCharacters()
       .then(data =>{
-        console.log(data.results
-          )
-        this.setState({api:data.results})    
-      } 
+        const planets = data.results.map(item =>item.origin.name);
+        let setPlanets = [...new Set(planets)]
+        this.setState({api:data.results, planets:setPlanets})
+        } 
       )
   }
-  /*{const houses = data.map(item =>item.house);
-    let setHouses = [...new Set(houses)]
-    const newData = data.map((item, index) => {return{...item, newId: index}});
-    this.setState({api:newData, houses:setHouses})
-  });*/
+
   componentDidMount(){
     this.fetchCharacters()
   }
   getUserInput(event){
     const inputValue = event.currentTarget.value;
-    console.log(inputValue)
     this.setState({query: inputValue});
+  }
+  getSelectValue(event){
+    const selectValue = event.currentTarget.value;
+    this.setState({planet: selectValue})
   }
   render() {
     return (
@@ -53,6 +55,9 @@ class App extends React.Component {
                       api = {this.state.api} 
                       query = {this.state.query}
                       getUserInput = {this.getUserInput} 
+                      getSelectValue = {this.getSelectValue}
+                      planet = {this.state.planet}
+                      planets = {this.state.planets}
                     />
                   )
                 }

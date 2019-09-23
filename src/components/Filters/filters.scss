@@ -2,6 +2,10 @@
 @import '../../scss/mixins';
 @import '../../scss/tipography';
 
+.filters__divs{
+  @include center; 
+  height: 80px;
+}
 .text__input{
   background-color: $semi-blue; 
   margin-bottom: 5px;
@@ -10,5 +14,31 @@
   @include input-tipo; 
   &::placeholder{
     color: $semi-white; 
+  }
+}
+.select__input{
+  color: $semi-white; 
+  background-color: $semi-blue; 
+  width: 201px; 
+  border: none; 
+  padding: 5px; 
+  height: 30px;
+  option{
+    background-color: #0E535F; 
+  }
+}
+@media (min-width: 768px) {
+  .filters__divs{
+    justify-content: flex-end; 
+    align-items: center; 
+    flex-direction: row; 
+    height: 50px;
+  }
+  .text__input{
+    margin-bottom: 0px;
+    margin-right:20px; 
+  }
+  .select__input{
+    margin-right:20px; 
   }
 }
